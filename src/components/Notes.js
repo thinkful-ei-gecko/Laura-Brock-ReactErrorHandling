@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Context from './Context'
+import AddNote from './AddNote';
 
 
 export default class Notes extends React.Component {

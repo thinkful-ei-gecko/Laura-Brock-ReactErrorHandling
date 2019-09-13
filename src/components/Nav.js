@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import React from 'react';
 import './Nav.css'
 import Context from './Context'
+import AddFolder from './AddFolder';
 
 
 export default class Nav extends React.Component {
@@ -18,6 +19,7 @@ export default class Nav extends React.Component {
 		return (
 			<div className='Nav'>
 				{navLinks}
+				<AddFolder />
 			</div>
 		)
 	}

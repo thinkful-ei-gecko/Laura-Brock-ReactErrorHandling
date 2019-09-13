@@ -4,6 +4,7 @@ import Header from "./Header";
 import "./FolderRoute.css";
 import Context from "./Context";
 import { Link } from "react-router-dom";
+import AddNote from "./AddNote";
 
 export default class FolderRoute extends React.Component {
   static contextType = Context;
@@ -47,7 +48,10 @@ export default class FolderRoute extends React.Component {
             <h2>{note.name}</h2>
             <p>Date Modified: {new Date(note.modified).toDateString()}</p>
             <p>{note.content}</p>
-            <button type="button" onClick={e => this.handleDeleteButton(e, note.id)}>
+            <button
+              type="button"
+              onClick={e => this.handleDeleteButton(e, note.id)}
+            >
               Delete
             </button>
           </li>
@@ -58,6 +62,7 @@ export default class FolderRoute extends React.Component {
         <Header />
         <div className="flexContainer">
           <Nav folders={this.props.folders} />
+          <AddNote />
           <ul>{selectedNotes}</ul>
         </div>
       </main>
