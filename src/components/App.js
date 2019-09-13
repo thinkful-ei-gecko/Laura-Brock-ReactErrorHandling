@@ -42,11 +42,31 @@ class App extends React.Component {
     })
   }
 
+  addFolder = folder => {
+    this.setState({
+      folders: [
+        ...this.state.folders,
+        folder
+      ]
+    })
+  }
+
+  addNote = note => {
+    this.setState({
+      notes: [
+        ...this.state.notes,
+        note
+      ]
+    })
+  }
+
   render() {
     const value = {
       notes: this.state.notes,
       folders: this.state.folders,
-      deleteNote: this.handleDelete
+      deleteNote: this.handleDelete,
+      addNote: this.addNote,
+      addFolder: this.addFolder
     };
     console.log(value);
     return (

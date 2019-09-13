@@ -41,6 +41,7 @@ export default class AddFolder extends React.Component {
         return response.json();
       })
       .then(folder => {
+        e.target.reset()
         this.context.addFolder(folder);
         this.props.history.push(`/folder/${folder.id}`);
       })
@@ -60,7 +61,7 @@ export default class AddFolder extends React.Component {
             onChange={e => this.setFolderName(e.target.value)}
             id="folder-Input"
             name="folder-name"
-          />
+          required/>
           <button type="submit">Add Folder</button>
         </form>
       </section>
