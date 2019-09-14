@@ -1,3 +1,7 @@
+body {
+  background-color: dimgrey;
+  color: white;
+}
 .App {
   text-align: center;
   display: flex;
@@ -7,11 +11,16 @@
 }
 li{
   list-style: none;
+  color: white;
 }
 a{
   text-decoration: none;
 }
 h1{
   font-size: 50px;
+}
+
+a:visited {
+  color: rgb(228, 74, 74);
 }
 

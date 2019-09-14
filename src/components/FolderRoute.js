@@ -13,9 +13,8 @@ export default class FolderRoute extends React.Component {
 
   handleDeleteButton = (e, noteId) => {
     const baseUrl = "http://localhost:9090";
-    console.log(this.props);
     e.preventDefault();
-    console.log(noteId);
+    //console.log(noteId);
 
     fetch(`${baseUrl}/notes/${noteId}`, {
       method: "DELETE",
@@ -82,6 +81,6 @@ FolderRoute.propTypes = {
     })
   }),
   history: PropTypes.object,
-  folders: PropTypes.string,
-  notes: PropTypes.string
+  folders: PropTypes.array,
+  notes: PropTypes.array
 }

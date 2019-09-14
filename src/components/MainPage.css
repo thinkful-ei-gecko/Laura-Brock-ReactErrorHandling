@@ -1,5 +1,3 @@
-
-
 .flexContainer{
     display: flex;
     flex-direction: row;
@@ -10,4 +8,8 @@
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 0px;
+}
+
+a:visited {
+    color: rgb(228, 74, 74);
 }
