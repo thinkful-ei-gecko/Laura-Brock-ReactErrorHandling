@@ -1,5 +1,6 @@
 import React from "react";
 import Context from "./Context";
+import './AddFolder.css'
 
 export default class AddFolder extends React.Component {
   static defaultProps = {
@@ -52,16 +53,16 @@ export default class AddFolder extends React.Component {
 
   render() {
     return (
-      <section>
-        <h3>Create a Folder</h3>
+      <section className='folderForm'>
+        <h3>Create New Folder</h3>
         <form onSubmit={this.handleButtonSubmit}>
-          <label htmlFor="folder-input">Name</label>
+          <label htmlFor="folder-input">Folder name: </label>
           <input
             type="text"
             onChange={e => this.setFolderName(e.target.value)}
             id="folder-Input"
             name="folder-name"
-          required/>
+          required/><br/>
           <button type="submit">Add Folder</button>
         </form>
       </section>

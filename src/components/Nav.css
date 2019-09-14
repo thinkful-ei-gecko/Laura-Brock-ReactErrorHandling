@@ -2,13 +2,20 @@
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	padding: 20px;
-	background-color: rgb(31, 49, 49);
+	padding: 9px;
+	background-color: rgb(61, 155, 155);
 }
 .Nav-item {
+	width: 60%;
+	margin-top: 15px;
+	padding: 6px;
 	text-decoration: none;
-	color: white;
+	color: rgb(43, 43, 43);
+	font-weight: bold;
+	background-color: rgb(91, 219, 219);
+	border: 2px solid grey
 }
+
 .is-active {
 	font-weight: bold;
 	color: red;

@@ -1,0 +1,13 @@
+.folderForm {
+  width: 90%;
+  border: 2px solid grey;
+  margin: 24px 0;
+  padding-bottom: 15px;
+
+}
+.folderForm h3 {
+  margin: 12px;
+}
+#folder-Input {
+  margin: 6px auto;
+}

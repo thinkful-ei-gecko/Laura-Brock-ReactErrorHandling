@@ -4,6 +4,7 @@ import Notes from './Notes'
 import Header from './Header'
 import './MainPage.css'
 import Context from './Context'
+import ErrorPage from './ErrorPage'
 
 export default class MainPage extends React.Component {
   static contextType = Context;
@@ -16,10 +17,12 @@ export default class MainPage extends React.Component {
           <Nav
             folders={this.props.folders}
           />
-          <Notes
-            folders={this.props.folders}
-            notes={this.props.notes}
-          />
+            <ErrorPage>
+              <Notes
+                folders={this.props.folders}
+               notes={this.props.notes}
+              />
+            </ErrorPage>
         </div>
       </main>
     )

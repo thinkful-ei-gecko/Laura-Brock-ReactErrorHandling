@@ -1,5 +1,6 @@
 import React from "react";
 import Context from "./Context";
+import './AddNote.css';
 
 export default class AddNote extends React.Component {
   static defaultProps = {
@@ -54,35 +55,31 @@ export default class AddNote extends React.Component {
   render() {
     const { folders = [] } = this.context;
     return (
-      <section>
-        <h3>Create a Note</h3>
+      <section className="newNoteForm">
         <form onSubmit={this.handleButtonSubmit}>
-          <div>
-            <label htmlFor="note-input">Name</label>
-            <input
-              type="text"
-              onChange={e => this.setNoteName(e.target.value)}
-              id="note-Input"
-              name="note-name"
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="note-content-input">Content</label>
-            <textarea id="note-content-Input" name="note-content" />
-          </div>
-          <div>
-            <label htmlFor="note-folder-select">Folder</label>
-            <select id="note-folder-select" name="note-folder-id">
-              <option value={null}>...</option>
-              {folders.map(folder => (
+          <div className='noteFormLeft'>
+            <h3>Create New Note</h3>
+            <label htmlFor="note-input">Name:&nbsp;</label>
+            <input type="text" id="note-Input" name="note-name" required  
+              onChange={e => this.setNoteName(e.target.value)} />
+            <div className='selectRow'>
+              <label htmlFor="note-folder-select">Folder:&nbsp;</label>
+              <select id="note-folder-select" name="note-folder-id">
+                <option value={null}>...</option>
+                {folders.map(folder => (
                 <option key={folder.id} value={folder.id}>
                   {folder.name}
                 </option>
-              ))}
-            </select>
+                ))}
+              </select>
+            </div>
+            <button type="submit">Add Note</button>
           </div>
-          <button type="submit">Add Note</button>
+
+          <div className='noteFormRight'>
+            <label htmlFor="note-content-input">Notes:</label><br/>
+            <textarea id="note-content-Input" name="note-content" rows='6' /><br/>
+          </div>
         </form>
       </section>
     );

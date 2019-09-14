@@ -1,0 +1,18 @@
+.newNoteForm {
+  background-color: lightgray;
+  padding-bottom: 3px;
+}
+.newNoteForm h3 {
+  margin: 0 0 6px 0;
+  text-align: left;
+}
+.noteFormLeft,
+.noteFormRight {
+  margin: 6px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+.selectRow{
+  margin: 6px 0 9px 0;
+}

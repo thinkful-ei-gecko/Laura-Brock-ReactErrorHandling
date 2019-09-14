@@ -9,8 +9,33 @@
     justify-content: flex-start;
     padding-top: 0px;
 }
+.rightSide {
+    display: flex;
+    flex-direction: column;    
+}
+
 ul{
     display: flex;
     flex-direction: column;
-
+    padding: 0;
+    margin: 0 auto;
 }
+
+.liStyle{
+    width: 100%;
+    margin: 12px 6px;
+    padding: 9px;
+    border: 2px solid grey;
+}
+li h2 {
+    margin: 0;
+}
+li p {
+    max-width: 420px;
+}
+#note-Input,
+#folder-Input {
+    width: 70%;
+    max-width: 150px;
+}
+  
