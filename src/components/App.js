@@ -68,7 +68,7 @@ class App extends React.Component {
       addNote: this.addNote,
       addFolder: this.addFolder
     };
-    console.log(value);
+    //console.log(value);
     return (
       <Context.Provider value={value}>
         <div className="App">

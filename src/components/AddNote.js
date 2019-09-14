@@ -1,6 +1,8 @@
 import React from "react";
 import Context from "./Context";
 import './AddNote.css';
+import PropTypes from 'prop-types';
+
 
 export default class AddNote extends React.Component {
   static defaultProps = {
@@ -84,4 +86,8 @@ export default class AddNote extends React.Component {
       </section>
     );
   }
+}
+
+AddNote.propTypes = {
+	history: PropTypes.array,
 }

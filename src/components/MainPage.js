@@ -5,6 +5,7 @@ import Header from './Header'
 import './MainPage.css'
 import Context from './Context'
 import ErrorPage from './ErrorPage'
+import PropTypes from 'prop-types'
 
 export default class MainPage extends React.Component {
   static contextType = Context;
@@ -27,4 +28,8 @@ export default class MainPage extends React.Component {
       </main>
     )
   }
+}
+MainPage.propTypes = {
+  folders: PropTypes.array,
+  notes: PropTypes.array
 }

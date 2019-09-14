@@ -5,6 +5,7 @@ import "./FolderRoute.css";
 import Context from "./Context";
 import { Link } from "react-router-dom";
 import AddNote from "./AddNote";
+import PropTypes from 'prop-types';
 
 
 export default class FolderRoute extends React.Component {
@@ -44,7 +45,8 @@ export default class FolderRoute extends React.Component {
     const selectedNotes = this.props.notes
       .filter(notes => notes.folderId === folder.id)
       .map(note => (
-        <Link to={`/note/${note.id}`}>
+        <Link to={`/note/${note.id}`}
+        key={note.id}>
           <li className='liStyle'>
             <h2>{note.name}</h2>
             <p>Date Modified: {new Date(note.modified).toDateString()}</p>
@@ -71,4 +73,15 @@ export default class FolderRoute extends React.Component {
       </main>
     );
   }
+}
+
+FolderRoute.propTypes = {
+	match: PropTypes.shape({
+    params: PropTypes.shape({
+      folderId: PropTypes.string.isRequired
+    })
+  }),
+  history: PropTypes.object,
+  folders: PropTypes.string,
+  notes: PropTypes.string
 }

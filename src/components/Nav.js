@@ -3,6 +3,7 @@ import React from 'react';
 import './Nav.css'
 import Context from './Context'
 import AddFolder from './AddFolder';
+import PropTypes from 'prop-types';
 
 
 export default class Nav extends React.Component {
@@ -12,7 +13,8 @@ export default class Nav extends React.Component {
 		const navLinks = this.props.folders.map(folder =>
 			<NavLink className='Nav-item'
 				activeClassName='is-active'
-				to={`/folder/${folder.id}`}>
+				to={`/folder/${folder.id}`}
+				key={folder.id}>
 				{folder.name}
 			</NavLink>)
 
@@ -23,5 +25,7 @@ export default class Nav extends React.Component {
 			</div>
 		)
 	}
-
+}
+Nav.propTypes = {
+	folders: PropTypes.array,
 }

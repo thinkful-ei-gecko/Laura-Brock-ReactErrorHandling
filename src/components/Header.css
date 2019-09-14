@@ -1,5 +1,8 @@
 h1 {
   margin: 0;
   padding: 9px;
-  background-color: rgb(91, 219, 219);
+  background-color: rgb(19, 19, 19);
+  color: white !important;
+}
+a:visited {
 }

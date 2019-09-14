@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from 'prop-types'
+
 
 class ErrorPage extends React.Component {
   state = {error: null};
@@ -25,3 +27,7 @@ class ErrorPage extends React.Component {
 }
 
 export default ErrorPage;
+
+ErrorPage.propTypes = {
+	children: PropTypes.object,
+}

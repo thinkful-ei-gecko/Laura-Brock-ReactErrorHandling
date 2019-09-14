@@ -13,7 +13,8 @@ export default class Notes extends React.Component {
 
     render() {
         const notes = this.context.notes.map(note =>
-            <Link to={`/note/${note.id}`}>
+            <Link to={`/note/${note.id}`}
+            key={note.id}>
                 <li style={liStyle}>
                     <h2>{note.name}</h2>
                     <p>Date Modified: {new Date(note.modified).toDateString()}</p>

@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import { Link } from "react-router-dom";
 import Context from "./Context";
+import PropTypes from 'prop-types';
 
 export default class Note extends React.Component {
   static contextType = Context;
@@ -58,4 +59,13 @@ export default class Note extends React.Component {
       </main>
     );
   }
+}
+
+Note.propTypes = {
+	match: PropTypes.shape({
+    params: PropTypes.shape({
+      noteId: PropTypes.string.isRequired
+    })
+  }),
+  history: PropTypes.object
 }

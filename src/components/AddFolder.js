@@ -1,6 +1,8 @@
 import React from "react";
 import Context from "./Context";
-import './AddFolder.css'
+import './AddFolder.css';
+import PropTypes from 'prop-types';
+
 
 export default class AddFolder extends React.Component {
   static defaultProps = {
@@ -68,4 +70,8 @@ export default class AddFolder extends React.Component {
       </section>
     );
   }
+}
+
+AddFolder.propTypes = {
+	history: PropTypes.object,
 }
