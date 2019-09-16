@@ -1,6 +1,6 @@
 .newNoteForm {
-  background-color: lightgray;
   padding-bottom: 3px;
+  border: 2px solid lightgray;
 }
 .newNoteForm h3 {
   margin: 0 0 6px 0;
