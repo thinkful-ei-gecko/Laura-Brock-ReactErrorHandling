@@ -44,10 +44,14 @@ export default class AddFolder extends React.Component {
         return response.json();
       })
       .then(folder => {
-        e.target.reset()
+        e.persist()
+        //e.target.reset()
         this.context.addFolder(folder);
         this.props.history.push(`/folder/${folder.id}`);
       })
+      .then((
+        e.target.reset()
+      ))
       .catch(error => {
         console.error({ error });
       });

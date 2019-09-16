@@ -44,11 +44,14 @@ export default class AddNote extends React.Component {
         return response.json();
       })
       .then(newNote => {
-        e.target.reset()
+        e.persist()
         //console.log(this.context.note)
         this.context.addNote(newNote);
         this.props.history.push(`/notes/${newNote.id}`);
       })
+      .then((
+        e.target.reset()
+      ))
       .catch(error => {
         console.error({ error });
       });

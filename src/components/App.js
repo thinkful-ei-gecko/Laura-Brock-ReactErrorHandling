@@ -15,9 +15,7 @@ class App extends React.Component {
   componentDidMount() {
     const baseUrl = "http://localhost:9090";
 
-    Promise.all([
-      fetch(`${baseUrl}/notes`),
-      fetch(`${baseUrl}/folders`)])
+    Promise.all([fetch(`${baseUrl}/notes`), fetch(`${baseUrl}/folders`)])
       .then(([notesResponse, foldersResponse]) => {
         if (!notesResponse.ok) {
           return notesResponse.json().then(e => Promise.reject(e));
@@ -33,32 +31,30 @@ class App extends React.Component {
           folders
         });
       })
+      /* .then(() => {
+        console.log(this.props)
+        this.state.props.history.push("/");
+      }) */
       .catch(e => console.log(e));
   }
 
   handleDelete = noteId => {
     this.setState({
       notes: this.state.notes.filter(note => note.id !== noteId)
-    })
-  }
+    });
+  };
 
   addFolder = folder => {
     this.setState({
-      folders: [
-        ...this.state.folders,
-        folder
-      ]
-    })
-  }
+      folders: [...this.state.folders, folder]
+    });
+  };
 
   addNote = note => {
     this.setState({
-      notes: [
-        ...this.state.notes,
-        note
-      ]
-    })
-  }
+      notes: [...this.state.notes, note]
+    });
+  };
 
   render() {
     const value = {
